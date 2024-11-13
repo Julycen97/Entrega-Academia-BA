@@ -1,0 +1,522 @@
+/* GENERAL STYLES */
+:root{
+    font-size: 1em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100vh;
+    position:static;
+}
+
+/* PRINCIPAL SECTION STYLES */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: H;
+    background-color: green;
+    height: 12vh;
+    min-height: 3rem;
+    min-width: 100%;
+}
+
+.main{
+    grid-area: M;
+    min-height: 70vh;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    grid-area: F;
+    background-color: green;
+    min-height: 3rem;
+    max-height: 4rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "H H H H"
+    "M M M M"
+    "M M M M"
+    "F F F F";
+    min-width: 100%;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+/* HEADER STYLES (TITTLE AND NAVBAR) */
+.tittle{
+    width: 45%;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.btnMobileOpen, .btnMobileClose{
+    border-radius: 15px ;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 3em;
+    width: 3em;
+}
+
+.btnMobileOpen:hover{
+    box-shadow: 1px 1px 10px black, -1px -1px 10px black;
+    transform: scale(1.1);
+}
+
+.btnMobileClose:hover{
+    box-shadow: 1px 1px 10px white, -1px -1px 10px white;
+    transform: scale(1.1);
+}
+
+.list{
+    width: 45%;
+    font-size: 1.3rem;
+}
+
+.listNav{
+    width: 90%;
+}
+
+.listNav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.itemNav{
+    list-style: none;
+    transition: transform 200ms ease;
+}
+
+.itemNav a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.itemNav:hover{
+    transform: scale(1.2);
+}
+
+/* MAIN STYLES (SECTIONS AND CARDS) */
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.articles h2{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, white, white, yellowgreen, yellowgreen, white, white);
+}
+
+/* CARD STYLES */
+.imageProduct{
+    grid-area: IP;
+    width: 100%;
+    min-height: 8rem;
+    height: 10vh;
+}
+
+.imageProduct img{
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    border-radius: 15px 15px 0 0;
+}
+
+.tittleProduct{
+    grid-area: TP;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.descriptionProduct{
+    margin: auto;
+    grid-area: DP;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.btnProduct{
+    grid-area: BP;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btnArticles{
+    width: 5rem;
+    height: 2rem;
+}
+
+.card{
+    display: grid;
+    padding: 10px;
+    grid-template-areas:
+    "IP IP IP IP"
+    "IP IP IP IP"
+    "TP TP TP TP"
+    "DP DP DP DP"
+    "DP DP DP DP"
+    "BP BP BP BP";
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    box-shadow: 3px 3px 5px rgb(215, 250, 151), -3px -3px 5px rgb(215, 250, 151);
+    max-height: 100rem;
+    min-height: 20rem;
+    transition: transform 200ms linear;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    background-color: whitesmoke;
+    box-shadow:
+    3px 0 5px yellowgreen,
+    0 3px 5px yellowgreen,
+    -3px 0 5px red,
+    0 -3px 5px red;
+    animation: pintar 2s infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* HOME STYLES */
+.containerMain{
+    width: 100%;
+    height: 100%;
+    position:static;
+}
+
+.imgPrincipal{
+    background: url("/assets/images/empresa/imagen-principal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.imgPrincipal h3{
+    color: white;
+    font-size: xx-large;
+    -webkit-text-stroke: 0.2px black;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* OPINION STYLES */
+.opinionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.opinionCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px black;
+    margin: 10px;
+    transition: transform 200ms linear;
+}
+
+.opinionCard:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px black, -3px -3px 5px black;
+}
+
+/* CONTACT STYLES */
+.main form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px black;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.tittleForm{
+    text-align: center;
+    grid-area: TF;
+    padding-bottom: 20px;
+}
+
+.itemForm, .inputForm, .btnForm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemForm{
+    grid-area: ITF;
+    text-align: end;
+}
+
+.inputForm{
+    grid-area: IPF;
+}
+
+.inputForm input, textarea{
+    border: 1.5px solid green;
+}
+
+.inputForm textarea{
+    resize: none;
+}
+
+.btnForm{
+    grid-area: BF;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.btnForm button{
+    width: 5rem;
+    height: 2rem;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 15px;
+    transition: transform 200ms linear;
+    background-color: green;
+    color: white;
+}
+
+.btnForm button:hover{
+    background-color: white;
+    color: green;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px green, -3px -3px 5px green;
+}
+
+.containerForm{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "TF TF TF TF"
+    "ITF ITF IPF IPF"
+    "ITF ITF IPF IPF"
+    "BF BF BF BF";
+}
+
+@keyframes pintar {
+    0%{
+        box-shadow:
+        3px 0 5px yellowgreen,
+        0 3px 5px yellowgreen,
+        -3px 0 5px red
+        0 -3px 5px red;
+    }
+    25%{
+        box-shadow:
+        0 3px 5px yellowgreen
+        -3px 0 5px yellowgreen,
+        0 -3px 5px red
+        3px 0 5px red;
+    }
+    50%{
+        box-shadow:
+        3px 0 5px red,
+        0 3px 5px red,
+        -3px 0 5px yellowgreen,
+        0 -3px 5px yellowgreen;
+    }
+    75%{
+        box-shadow:
+        0 3px 5px red,
+        -3px 0 5px red,
+        0 -3px 5px yellowgreen,
+        3px 0 5px yellowgreen;
+    }
+    100%{
+        box-shadow:
+        3px 0 5px yellowgreen,
+        0 3px 5px yellowgreen,
+        -3px 0 5px red,
+        0 -3px 5px red;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .card{
+        width: 40%;
+        min-height: 19rem;
+    }
+
+    .tittle{
+        font-size: large;
+    }
+
+    .itemNav{
+        font-size: medium;
+    }
+
+    .opinionCard{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .card{
+        min-height: 14rem;
+    }
+
+    .imageProduct img{
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .imageProduct{
+        min-height: 5rem;
+        height: 8rem;
+    }
+
+    .descriptionProduct{
+        -webkit-line-clamp: 2;
+    }
+
+    .opinionCard{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tittle{
+        font-size: medium;
+    }
+
+    .imgPrincipal h3{
+        font-size: medium;
+    }
+
+    .card{
+        min-height: 15rem;
+        height: 17rem;
+        width: 80%;
+    }
+
+    .btnMobileClose, .btnMobileOpen{
+        display: block;
+    }
+
+    .btnMobileOpen{
+        margin-right: 10px;
+    }
+
+    .btnMobileClose{
+        margin-top: 20px;
+    }
+
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        z-index: 1;
+    }
+
+    .listNav{
+        background-color: black;
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        gap: 1rem;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        padding-left: 2rem;
+        padding-right: 10px;
+        visibility: hidden;
+        width: fit-content;
+    }
+
+    .listNav ul{
+        align-items: start;
+        flex-direction: column;
+        z-index: 1;
+        gap: 20px;
+    }
+
+    .listNav a{
+        color: white;
+    }
+
+    .listNav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hiddenAll{
+        z-index: -1;
+    }
+
+    .hidden{
+        display: none;
+    }
+}
