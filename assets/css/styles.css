@@ -238,7 +238,7 @@ html, body{
 }
 
 .imgPrincipal{
-    background: url("../assets/images/empresa/imagen-principal.jpg");
+    background: url("/Pre-Entrega-Academia-BA/assets/images/empresa/imagen-principal.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
