@@ -1,4 +1,4 @@
-# PRE ENTREGA PROYECTO FINAL | ACADEMIA BA
+# ENTREGA PROYECTO FINAL | ACADEMIA BA
 
 ### Página para ventas de productos, con distintas secciones enumeradas a continuación:
 
