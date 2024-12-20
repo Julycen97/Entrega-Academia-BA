@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Productos</title>
+    <title>Carrito</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header">
             <div class="tittle">
-                <h1>Productos</h1>
+                <h1>Carrito</h1>
             </div>
 
             <div class="list">
@@ -34,12 +34,13 @@
         <main class="main">
             <section class="cartContainer">
                 <div>
-                    <table>
+                    <table id="tableCart" class="table">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>TITULO</th>
                                 <th>PRECIO</th>
+                                <th>CANTIDAD</th>
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
@@ -48,15 +49,14 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4">TOTAL:</td>
-                                <td id="total"></td>
+                                <td colspan="5" id="total"></td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-
                 <div>
-
+                    <button type="button" class="btnCart" onclick="vaciarCarrito()"><i class="bi bi-trash"></i> Vaciar Carrito</button>
+                    <button type="button" class="btnCart" onclick="finalizarCompra()"><i class="bi bi-check-circle"></i> Finalizar Compra</button>
                 </div>
             </section>
         </main>
