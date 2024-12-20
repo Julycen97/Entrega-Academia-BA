@@ -64,15 +64,20 @@ function quitarProducto(id) {
 
   carrito.forEach((producto, indice) => {
     if (producto.id == id) {
-      carrito[indice].cantidad -= 1;
+      if(producto.cantidad == 1){
+        eliminarProducto(producto.id);
+      }
+      else{
+        carrito[indice].cantidad -= 1;
+        
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+
+        animacionCarrito();
+
+        actualizarCarrito();
+      }
     }
   })
-
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  animacionCarrito();
-
-  actualizarCarrito();
 }
 
 function eliminarProducto(id) {
