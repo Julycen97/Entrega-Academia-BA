@@ -16,9 +16,10 @@
    >[!IMPORTANT]
    >
    >El formulario se encuentra funcionando.
+5. Página dedicada al carrito de compras (**CARRITO**), en el se van a poder ver todos los productos agregados para la compra, así como también opciones para agregar más del mismo tipo, quitar del mismo tipo y eliminar el producto del carrito. 
 
 Se utilizó HTML semántico para identificar las secciones del documento,
 también se utilizó **CSS GRID** para ordenar el contenido en especie de
 "layout", organizando el interior de cada sección con **CSS FLEXBOX**.
 
-Se utilizó JavaScript para darle funcionalidad a un **MENU** tipo mobile cuando la pantalla se achica demasiado. 
+Se utilizó JavaScript para darle funcionalidad a un **MENU** tipo mobile cuando la pantalla se achica demasiado, también para realizar la lectura de una API pública y modificar el DOM. 
